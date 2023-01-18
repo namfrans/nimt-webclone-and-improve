@@ -1,0 +1,590 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+html{
+    scroll-behavior: smooth;
+}
+
+/* Navigation bar and header navigations */
+h1{
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 34px;
+    color: #685421;
+    display:flex;
+    align-self: center;
+    margin-left:15%;
+}
+.navbar{
+    position: fixed;
+    width:100%;
+    padding: 17px 0;
+    font-family: 'Ubuntu', sans-serif;
+    background: #500808;
+    transition: all 0.3s ease;
+    z-index: 999;
+}
+.navbar  .menu{
+
+    display: flex;
+    flex-direction: row;
+    justify-content:flex-end;
+    list-style: none;
+    margin-right: -100px;
+    padding: 0vh 4vw;
+}
+.navbar .menu li{
+    list-style:none;
+    display:inline-block;
+    text-decoration: none;
+    margin-top: 50px;
+}
+.navbar .menu li a{
+    position:relative;
+    display: block;
+    text-decoration: underline;
+    margin-left: 20px;
+    padding: 5px 2px;
+    font-weight: 500;
+    font-size: 12px;
+    color:#685421;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+    transition:color 0.3s ease;
+}
+.navbar .menu li a:hover{
+        background-color:#685421;
+        border-radius: 4px;
+        color:#500808;
+}
+.max-width{
+    max-width: 1900px;
+    padding:0 80px;
+    margin: auto;
+}
+.navbar .max-width{
+    Display:flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.menu-icon {
+    font-size: 26px;
+    font-weight:500;
+    color: #685421;
+    cursor: pointer;
+    display: none;
+}
+.menu-icon i.active::before{
+    content: "\f00d";
+}
+.logo img{
+    border-radius: 4px;
+}
+.scroll-up-btn{
+    font-family: 'Poppins', sans-serif;
+    position: fixed;
+    height:45px;
+    width:42px;
+    background:cadetblue;
+    right:30px;
+    bottom: 30px;
+    text-align: center;
+    line-height: 45px;
+    color:#500808;
+    z-index: 9999;
+    font-size: 30px;
+    border-radius:6px;
+    opacity:0;
+    cursor: pointer;
+    pointer-events: none;
+    transition:all 0.3s ease;
+}
+.scroll-up-btn.show{
+    bottom:30px;
+    opacity:1;
+    pointer-events: auto;
+}
+
+/* Welcome section styling */
+.welcome{
+    display: flex;
+    width:100%;
+    height: 800px;
+    background: url(nimtBuilding.jpg) no-repeat center;
+    background-size:cover;
+    color:white;
+    min-height: 500px;
+    font-family: 'Poppins', sans-serif;
+}
+h3{
+    font-weight: bold;
+    font-size: 64px;
+    line-height: 74px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    color: #685421;
+
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+    animation-name: noticetoptext;
+    animation-duration: 8s;
+
+}
+@keyframes noticetoptext {
+0%   {background-color:#685421;}
+25%  {background-color:#500808;}
+50%  {background-color:black;}
+75%  {background-color:gray;}
+100% {background-color:goldenrod;}
+}
+
+.welcome .intake-buttons{
+    margin: 50px 42%;
+}
+.welcome .intake-buttons a{
+    margin-bottom: 20px;
+    padding: 8px 20px;
+    background: #685421;
+    border: 2px solid #500808;
+    border-radius: 4px;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+    display: inline-block;
+    text-align: center;
+    color: #500808;
+    width: 200px;
+    transition: all 0.3s ease;
+}
+.welcome .intake-buttons a:hover{
+    background:#46350d;
+}
+/* Similar properties to be used by different sections */
+
+.information-page .information-content{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+/* Notice, examination information & departmnts Styling starts here */
+.information-page{
+    width:100%;
+    height: 800px;
+}
+/* The below properties can be used by other sections */
+.information-page .max-width .text, .results .max-width .text, .transport .max-width .text{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 50px;
+    line-height: 34px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #500808;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+/* Until here */
+.information-page .max-width .notice-board{
+    width:100%;
+    height:230px;
+    margin: 20px 0 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.information-page .max-width .p-container{
+    width: 500px;
+    height: 300px;
+    background: #500808;
+    border-radius: 4px;
+    padding: 100px 50px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    text-align: center;
+    color: #685421;
+}
+.information-page .information-content{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+.information-page .information-content .column{
+    width: calc(50% - 30px);
+}
+/* Styling the examination information part*/
+.information-page .information-content .left{
+    width: 40%;
+    height: 470px;
+    padding: 15px;
+}
+h4{
+    width:100%;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 35px;
+    margin-top: 55px;
+    margin-bottom: 20px;
+    color: #500808;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.downnav ul {
+    list-style-type: none;
+}  
+
+.downnav ul li {
+    list-style: none;
+    text-align: left;
+    margin-bottom: 5px;
+    padding: 16px 30px;
+    width: 550px;
+    height: 51px;
+    transition:color 0.3s ease;
+    box-shadow: 0px 4px 4px #685421(0, 0, 0, 0.25), 0px 4px 4px #685421(0, 0, 0, 0.25);
+    background: #500808;
+    box-sizing: border-box;
+    border-radius: 4px
+  }
+.downnav ul li:hover{
+    cursor: pointer;
+    background:#685421;
+}
+.downnav ul li a {
+    text-decoration: none;
+    color: #FFFFFF;
+    display: block;
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+  }
+/* Styling the dapartments on the right column side */
+.information-page .information-content .right h4{
+    margin-top: 55px;
+    margin-bottom: 25px;
+}
+.information-page .information-content .right{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-start;
+    width:58%;
+    height: 470px;
+    padding: 0 2px;
+}
+.information-page .information-content .right .card{
+    margin: 0 15px 15px;
+    width: 240px;
+    height: 157px;
+    background-size: cover;
+    padding: 50px 20px;
+
+    /* Font in card styling */
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    text-align: center;
+    color: #685421;
+    /* Card sarrounding styling */
+    border: 1px solid #500808;
+    box-sizing: border-box;
+    box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+.information-page .information-content .right .card:hover{
+    cursor: pointer;
+    box-shadow: 0 0 10px #500808, 0 0 40px #500808, 0 0 10px #500808;
+}
+.information-page .information-content .right #rectangle2{
+    /* Rectangle 1 */
+    background: url(167235043-the-student-fills-in-the-answers-to-the-test-in-the-exercise-and-examination-paper-with-a-pencil-com.jpg);
+    background-color: rgba(255,255,255,0.6);
+    background-blend-mode: lighten;
+    background-size: 100%;
+  }
+
+.information-page .information-content .right #rectangle3{
+    background: url(KRAATZNIMTINTAKE2019.jpg);
+    background-color: rgba(255,255,255,0.6);
+    background-blend-mode: lighten;
+    background-size: 100%;
+}
+.information-page .information-content .right #rectangle4{
+    background: url(openbook.jpg);
+    background-color: rgba(255,255,255,0.6);
+    background-blend-mode: lighten;
+    background-size: 100%;
+}
+.information-page .information-content .right #rectangle5{
+    /* Rectangle 5 */
+    background: url(StudentAffairs-BlogCover-2.png);
+    background-color: rgba(255,255,255,0.6);
+    background-blend-mode: lighten;
+    background-size: 100%;
+}
+.information-page .information-content .right #rectangle6{
+    /* Rectangle 4 */
+    background: url(s3-finance_0-default.jpg);
+    background-color: rgba(255,255,255,0.6);
+    background-blend-mode: lighten;
+    background-size: 100%;
+}
+/* Final examination results section styling starts here */
+
+.results{
+    display: flex;
+    width:100%;
+    height: 800px;
+    background: #685421;
+    background-size:cover;
+    min-height: 500px;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+}
+.results .max-width .text{
+    top:-100%;
+}
+.results .max-width .buttons-container{
+    /* Rectangle 12 */
+    width: 100%;
+    height: 120px;
+    background: #500808;
+    border-radius: 8px;
+    margin-top: 50px;
+    padding: 20px 15px 20px 15px;
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content:space-between;
+}
+.results .max-width .buttons-container .res-button{
+    width: 100px;
+    height: 33px;
+    background: #685421;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 4px;
+    /* Text style */
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px;
+    text-align: center;
+    color: #500808;
+}
+.results .max-width .buttons-container .res-button:hover{
+    text-decoration: none;
+    color: #685421;
+    background-color:rgba(0,0,0,.30);
+}
+
+/* Transport section styling starts here */
+.transport{
+    display: flex;
+    width:100%;
+    height: 800px;
+    background: #fff;
+    min-height: 500px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    align-items: center;
+}
+.transport .max-width .content-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.transport .max-width .text{
+    margin-bottom: 50px;
+    top: 2px;
+}
+.transport .max-width .content-container .trans-button{
+    width: 172px;
+    height: 50px;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)) drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    background: #500808;
+    border-radius: 4px;
+    /* Text style */
+    font-family:'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    text-align: center;
+    color: #685421;
+}
+.transport .max-width .content-container .trans-button:hover{
+    text-decoration: none;
+    color: #000000;
+    background-color:#685421;
+}
+footer{
+    position: relative;
+    text-align: center;
+    background:#685421;
+}
+footer .footer-text .copyright{
+    font-family: 'Ubuntu', sans-serif;
+    color: #500808;
+}
+footer .footer-img .nta{
+    position:absolute;
+    width: 116px;
+    height: 100px;
+    left: 11px;
+}
+
+footer .footer-img .nsfaf{
+    width: 116px;
+    height: 100px;
+    right: 120px;
+}
+
+footer .footer-img .nqa{
+    position:absolute;
+    width: 116px;
+    height: 100px;
+    right: 11px;
+}
+@media (max-width:1080px) {
+    
+}
+@media (max-width:947px) {
+    
+}
+@media (max-width:800px) {
+    .max-width{
+        padding:0 20px;
+        width: 100%;
+    }
+    h1{
+        font-size: 18px;
+        margin-left: 50px;
+    }
+    .navbar{
+        width: 100%;
+    }
+    .navbar .menu{
+        position:fixed;
+        height:100vh;
+        width:100%;
+        left:-100%;
+        top: 0;
+        background:#500808;
+        padding-bottom: 80px;
+        display: flex;
+        flex-direction:column;
+        align-items: center;
+        transition: all 0.3s ease;
+    }
+   .navbar .menu.active{
+        left: 0;
+   } 
+    .navbar .menu li{
+        display:block;
+    }
+    .navbar .menu li a{
+        display: inline-block;
+        margin:20px 0;
+        font-size: 24px;
+    }
+    .menu-icon{
+        display:block;
+        z-index: 999;
+    }
+
+    /* Welcome section media */
+    .welcome{
+        display: flex;
+        width:100%;
+        align-items: center;
+    }
+    h3{
+        font-size: 38px;
+        line-height: 50px;
+        margin-left: auto;   
+    }
+    .welcome .intake-buttons{
+        margin-top: 50px;
+    }
+    .welcome .intake-buttons a{
+        margin-bottom: 20px;
+        height: 70px;
+        line-height: 50px;
+        font-size: 18px;
+    }
+    /* Information content medias */
+    .information-page{
+        height:auto;
+    }
+    .information-page .information-content .left{
+        display:flex;
+        justify-content:center;
+        margin: 0 auto;
+        width: 100%;
+    }
+    .information-page .information-content .right{
+        flex:100%;
+    }
+    .information-page .information-content .left h4{
+        font-size: 30px;
+        margin-top: 70px;
+        margin-bottom: 15px;
+    }
+    .information-page .max-width .p-container{
+        width:100%;
+        height:auto;
+    }
+    .downnav ul li{
+        width: 100%;
+        height:auto;
+    }
+    .downnav ul li a{
+        font-size: 12px;
+    }
+    .information-page .information-content .right h4{
+        font-size: 30px;
+        margin: 10px 0 15px;
+        text-align: center;
+    }
+    .information-content .column{
+        width: 100%;
+        margin-bottom: 100px;
+    }
+    .information-page .information-content .right .card{
+        width: 100%;
+        height: auto;
+        font-size: 14px;
+        padding:30px  0 30px;
+    }
+    /* Results section media styling */
+    .results .max-width .text{
+        line-height: 50px;
+    }
+
+    /* Transport information media styling */
+    .transport .max-width .text{
+        text-align: center;
+        line-height: 50px;
+    }
+
+    /* Footer media styles */
+    footer .footer-img img{
+        width: 100%;
+        height:auto;
+        border-radius:4px;
+    }
+}
+@media (max-width:705px) {
+    
+}
+@media (max-width:630px) {
+    
+}
